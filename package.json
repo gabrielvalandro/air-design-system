@@ -1,0 +1,31 @@
+{
+  "name": "air-design-system",
+  "version": "1.0.0",
+  "description": "An awesome, light and responsive template for a design system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielvalandro/air-design-system.git"
+  },
+  "keywords": [
+    "Design",
+    "System",
+    "Template",
+    "Responsive",
+    "Awesome"
+  ],
+  "author": "Gabriel Valandro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielvalandro/air-design-system/issues"
+  },
+  "homepage": "https://github.com/gabrielvalandro/air-design-system#readme",
+  "devDependencies": {
+    "clipboard": "^1.7.1",
+    "font-awesome": "^4.7.0"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,297 @@
+/* =================================
+  Base element styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "News Cycle", sans-serif;
+}
+
+body {
+	color: #3E3E40;
+	font-size: 16px;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:active,
+a:link,
+a:visited {
+	color: inherit;
+}
+
+button {
+	border: 0;
+	cursor: pointer;
+}
+
+h1 {
+	margin: 0;
+	font-size: 2em;
+	letter-spacing: .03em;
+}
+
+h2 {
+	margin: 1em 0;
+	font-size: 1.4em;
+}
+
+h3,
+p {
+	font-family: "Open Sans", sans-serif;
+}
+
+h3 {
+	margin-bottom: .5em;
+	font-size: 1em;
+}
+
+h3 + p {
+	margin: .5em 0;
+	font-size: .85em;
+}
+
+p {
+	line-height: 1.5;
+}
+
+pre {
+	margin: 0;
+	overflow-wrap: break-word;
+	white-space: pre-line;
+	word-wrap: break-word;
+}
+
+/* =================================
+  Layout
+==================================== */
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.page-content {
+	padding: 0 .5em .5em;
+}
+
+/* =================================
+  Menus
+==================================== */
+
+/* --------------- Side menu ---------------*/
+
+.side-menu,
+.sub-menu {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.side-menu {
+	height: 100vh;
+	justify-content: space-between;
+}
+
+.side-menu__search {
+	padding: 0.625em 0.625em 0 0.625em;
+}
+
+.side-menu__search input {
+	width: 100%;
+	height: 3.125em;
+	padding: 0 1em;
+	border: 1px solid #ddd;
+	outline: none;
+	transition: .3s;
+}
+
+.side-menu__search input:focus {
+	box-shadow: 0 1px 5px rgba(0,0,0,.2);
+}
+
+.side-menu__option a:active, 
+.side-menu__option a:hover {
+	color: #5CB3CF;
+}
+
+.side-menu__option > a {
+	display: block;
+	padding: 1.2em 1.5em;
+	font-size: 1.5em;
+	transition: .3s;
+}
+
+.side-menu__option--accordion > a::after {
+	content: "\f0d7";
+	float: right;
+	display: inline-block;
+	margin-top: 4px; 
+	font-family: FontAwesome;
+	line-height: 1;
+}
+
+.side-menu__option--accordion.side-menu__option--is-open > a::after {
+	content: "\f0d8";
+}
+
+.side-menu__footer {
+	padding: 1.8em 0;
+	background-color: #79BFD7;
+	font-weight: 700;
+	letter-spacing: .04em;
+	text-align: center;
+}
+
+.sub-menu {
+	display: none;
+	opacity: 0;
+	transition: opacity .2s;
+}
+
+.sub-menu a {
+	display: block;
+	padding: .5em 2.25em;
+	font-size: 1.1em;
+}
+
+.sub-menu a:hover {
+}
+
+/* --------------- Top menu ---------------*/
+
+.top-menu {
+	position: absolute;
+	top: .4em;
+	left: .8em;
+	padding: .5em .45em;
+	border-radius: 100%;
+	cursor: pointer;
+	transition: .4s;
+}
+
+.top-menu:hover {
+	background-color: rgba(0, 0, 0, .2);
+}
+
+.top-menu::before {
+	content: "\f0c9";
+	display: block;
+	margin: -3px 0 -5px;
+	color: #fff;
+	font-family: FontAwesome;
+	font-size: 1.4em;
+}
+
+/* =================================
+  Headers
+==================================== */
+
+.main-header {
+	position: relative;
+	padding: 3em 1em 2em;
+	margin: 0 -.5em;
+	background-color: #79BFD7;
+	box-shadow: 0 2px 11px #717070;
+}
+
+/* =================================
+  Buttons
+==================================== */
+
+.btn {
+	padding: 1.2em .9em;
+	background-color: #79BFD7;
+	color: #fff;
+	font-family: "Open Sans", sans-serif;
+	font-size: .8em;
+	font-weight: 400;
+	border-radius: 20px;
+	letter-spacing: 0.02em;
+	transition: .3s;
+}
+
+.btn:hover {
+	background-color: #3AA3C5;
+}
+
+/* =================================
+  Code snippet
+==================================== */
+
+.code-snippet {
+	position: relative;
+	padding: 0 .5em .8em;
+	margin: .5em 0;
+	background-color: #eee;
+	color: #657b83;
+	font-size: .85em;
+}
+
+.code-snippet--console {
+	background-color: #333;
+	color: #fff;
+}
+
+.code-snippet__header {
+	padding: .7em .5em;
+	margin: 0 -0.5em .5em;
+	color: #fff;
+	font-family: "Open Sans";
+	font-weight: 600;
+}
+
+.code-snippet--html .code-snippet__header {
+	background-color: #EE77D0;
+}
+
+.code-snippet--html .code-snippet__header::before {
+	content: "HTML";
+}
+
+.code-snippet--console .code-snippet__header {
+	background-color: #3E3E40;
+}
+
+.code-snippet--console .code-snippet__header::before {
+	content: "Console";
+}
+
+.code-snippet__copy {
+	margin-right: .3em;
+}
+
+/* =================================
+  Helpers
+==================================== */
+
+/* --------------- Positioning ---------------*/
+
+.u-left {
+	float: left;
+}
+
+.u-right {
+	float: right;
+}
+
+/* --------------- Display and box model ---------------*/
+
+.u-m-top3 {
+	margin-top: 3px;
+}
+
+/* =================================
+  Javascript states
+==================================== */
+
+.is-visible {
+	display: block;
+}
